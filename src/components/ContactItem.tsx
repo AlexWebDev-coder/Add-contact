@@ -17,7 +17,7 @@ const ContactItem: FC<IContactProps> = ({ name, number, id }) => {
     <>
       <span
         style={{ display: "flex", color: "red", cursor: "pointer" }}
-        onClick={() => dispatch(removeContact(id))}
+        onClick={() => dispatch(removeContact({ id }))}
       >
         X
       </span>

@@ -21,7 +21,7 @@ const contactSlice = createSlice({
         addContact: (state, action: PayloadAction<IContactState>) => {
             state.contacts.push(action.payload)
         },
-        removeContact: (state, action: PayloadAction<number>) => {
+        removeContact: (state, action) => {
             state.contacts.splice(action.payload, 1)
         }
     }
