@@ -1,10 +1,11 @@
+import { combineReducers } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
-import contactReducer from "./contactReducer"
+import reducers from "./reducers"
+
+const rootReducer = combineReducers(reducers)
 
 export const store = configureStore({
-    reducer: {
-        usersContact: contactReducer
-    }
+    reducer: rootReducer
 })
 
 export type RootState = ReturnType<typeof store.getState>

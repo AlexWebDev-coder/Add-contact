@@ -4,14 +4,9 @@ import { FC } from "react";
 import { Card } from "antd";
 import { removeContact } from "../redux-toolkit/contactReducer";
 import { useAppDispatch } from "../hooks/hooks";
+import { IContactState } from "../redux-toolkit/types";
 
-interface IContactProps {
-  id: number;
-  name: string;
-  number: string;
-}
-
-const ContactItem: FC<IContactProps> = ({ name, number, id }) => {
+const ContactItem: FC<IContactState> = ({ name, number, id }) => {
   const dispatch = useAppDispatch();
   return (
     <>

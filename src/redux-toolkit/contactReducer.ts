@@ -1,14 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import {IContact, IContactState} from "./types"
 
-export interface IContactState {
-    id: number,
-    name: string,
-    number: string
-}
-
-export interface IContact {
-    contacts: IContactState[]
-}
 
 const initialState: IContact = {
     contacts: []
