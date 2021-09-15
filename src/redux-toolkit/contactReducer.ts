@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface IContactState {
     id: number,
@@ -18,10 +18,10 @@ const contactSlice = createSlice({
     name: "contact",
     initialState,
     reducers: {
-        addContact: (state, action) => {
+        addContact: (state, action: PayloadAction<IContactState>) => {
             state.contacts.push(action.payload)
         },
-        removeContact: (state, action) => {
+        removeContact: (state, action: PayloadAction<number>) => {
             state.contacts.splice(action.payload, 1)
         }
     }
